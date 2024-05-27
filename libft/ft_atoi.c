@@ -6,13 +6,13 @@
 /*   By: gromiti <gromiti@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 12:52:43 by gromiti           #+#    #+#             */
-/*   Updated: 2024/05/26 16:13:44 by gromiti          ###   ########.fr       */
+/*   Updated: 2024/05/27 17:07:21 by gromiti          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi(const char *s, int *err)
+int	ft_atoi(const char *s)
 {
 	long int	res;
 	int			sign;
@@ -31,11 +31,6 @@ int	ft_atoi(const char *s, int *err)
 	{
 		res = (res * 10) + (*s - 48);
 		s++;
-	}
-	if (res * sign > 2147483647 || res * sign < -2147483648)
-	{
-		*err = 1;
-		return (0);
 	}
 	return (res * sign);
 }
