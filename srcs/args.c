@@ -6,7 +6,7 @@
 /*   By: gromiti <gromiti@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/26 17:05:16 by gromiti           #+#    #+#             */
-/*   Updated: 2024/05/27 17:43:04 by gromiti          ###   ########.fr       */
+/*   Updated: 2024/05/27 18:36:00 by gromiti          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ int	max_min_check(char *s)
 	return (1);
 }
 
-int digit_check(int argc, char **argv)
+int	digit_check(int argc, char **argv)
 {
 	int i;
 	int j;
@@ -55,7 +55,7 @@ int digit_check(int argc, char **argv)
 	return (1);
 }
 
-int dupl_check(int argc, char **argv)
+int	dupl_check(int argc, char **argv)
 {
 	int i;
 	int j;
@@ -74,7 +74,7 @@ int dupl_check(int argc, char **argv)
 	return (1);
 }
 
-int ord_check(int argc, char **argv)
+int	ord_check(int argc, char **argv)
 {
 	int i;
 	int j;
@@ -86,16 +86,13 @@ int ord_check(int argc, char **argv)
 		while (i + j++ < argc - 1)
 		{
 			if (ft_atoi(argv[i]) > ft_atoi(argv[i + j]))
-			{
-				printf ("pippo");
 				return (1);
-			}
 		}
 	}
 	return (0);
 }
 
-void args_check_parse(int argc, char **argv, int *a, int *b)
+void	args_check_parse(int argc, char **argv, int *a, int *b)
 {
 	int i;
 

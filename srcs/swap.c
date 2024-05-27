@@ -6,13 +6,13 @@
 /*   By: gromiti <gromiti@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/27 18:26:52 by gromiti           #+#    #+#             */
-/*   Updated: 2024/05/27 18:27:02 by gromiti          ###   ########.fr       */
+/*   Updated: 2024/05/27 18:34:19 by gromiti          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../incl/push_swap.h"
 
-void	sa(int *a, int *a_elem)
+void	sa(int *a)
 {
 	int	tmp;
 
@@ -22,7 +22,7 @@ void	sa(int *a, int *a_elem)
 	write(1, "sa\n", 3);
 }
 
-void	sb(int *b, int *b_elem)
+void	sb(int *b)
 {
 	int	tmp;
 
@@ -32,7 +32,7 @@ void	sb(int *b, int *b_elem)
 	write(1, "sb\n", 3);
 }
 
-void	ss(int *a, int *b, int *a_elem, int *b_elem)
+void	ss(int *a, int *b)
 {
 	int	tmp;
 

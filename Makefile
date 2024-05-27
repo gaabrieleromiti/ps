@@ -6,7 +6,7 @@
 #    By: gromiti <gromiti@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/05/25 17:21:30 by gromiti           #+#    #+#              #
-#    Updated: 2024/05/26 17:41:33 by gromiti          ###   ########.fr        #
+#    Updated: 2024/05/27 18:30:45 by gromiti          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,8 @@ NAME = push_swap
 
 LIBFT =libft.a
 
-SRCS = srcs/args.c srcs/free.c srcs/main.c \
+SRCS = srcs/args.c srcs/free.c srcs/main.c srcs/push.c srcs/r_rotate.c \
+		srcs/rotate.c srcs/swap.c \
 
 OBJS = $(SRCS:%.c=%.o)
 

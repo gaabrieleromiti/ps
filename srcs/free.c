@@ -6,13 +6,13 @@
 /*   By: gromiti <gromiti@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/26 17:06:29 by gromiti           #+#    #+#             */
-/*   Updated: 2024/05/26 17:06:45 by gromiti          ###   ########.fr       */
+/*   Updated: 2024/05/27 18:36:10 by gromiti          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../incl/push_swap.h"
 
-void free_err_check(int *a, int *b, int err)
+void	free_err_check(int *a, int *b, int err)
 {
 	if (err == 0)
 	{

@@ -6,7 +6,7 @@
 /*   By: gromiti <gromiti@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/26 15:28:00 by gromiti           #+#    #+#             */
-/*   Updated: 2024/05/27 17:10:18 by gromiti          ###   ########.fr       */
+/*   Updated: 2024/05/27 18:36:39 by gromiti          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,29 @@
 
 int		max_min_check(char *s);
 int		dupl_check(int argc, char **argv);
+int		dupl_check(int argc, char **argv);
 int		ord_check(int argc, char **argv);
-//void args_parse();
 void	args_check_parse(int argc, char **argv, int *a, int *b);
 
 void	free_err_check(int *a, int *b, int err);
+
+void	slide_down(int *stack, int *elem);
+void	slide_up(int *stack, int *elem);
+void	pa(int *a, int *b, int *a_elem, int *b_elem);
+void	pb(int *a, int *b, int *a_elem, int *b_elem);
+
+void	rra(int *a, int *a_elem);
+void	rrb(int *b, int *b_elem);
+void	rrr(int *a, int *b, int *a_elem, int *b_elem);
+
+void	ra(int *a, int *a_elem);
+void	rb(int *b, int *b_elem);
+void	rr(int *a, int *b, int *a_elem, int *b_elem);
+
+void	sa(int *a);
+void	sb(int *b);
+void	ss(int *a, int *b);
+
+
 
 #endif
