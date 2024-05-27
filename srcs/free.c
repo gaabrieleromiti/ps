@@ -1,33 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   free.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gromiti <gromiti@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/25 17:56:31 by gromiti           #+#    #+#             */
-/*   Updated: 2024/05/27 17:28:34 by gromiti          ###   ########.fr       */
+/*   Created: 2024/05/26 17:06:29 by gromiti           #+#    #+#             */
+/*   Updated: 2024/05/26 17:06:45 by gromiti          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../incl/push_swap.h"
 
-int	main(int argc, char **argv)
+void free_err_check(int *a, int *b, int err)
 {
-	int	*a;
-	int	*b;
-	// int	a_elem;
-	// int	b_elem;
-
-	a = ft_calloc(argc - 1, sizeof(int));
-	b = ft_calloc(argc - 1, sizeof(int));
-	// a_elem = argc - 1;
-	// b_elem = 0;
-	args_check_parse(argc, argv, a, b);
-	int	i = -1;
-	while(i++ < argc - 2)
-		printf("%d\n", a[i]);
-	if (argc < 2)
-		return (0);
+	if (err == 0)
+	{
+		free(a);
+		free(b);
+		exit(0);
+	}
+	if (err == 2)
+	{
+		free(a);
+		free(b);
+		write(2, "Error\n", 6);
+		exit(1);
+	}
 }
-
