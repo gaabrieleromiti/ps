@@ -6,7 +6,7 @@
 /*   By: gromiti <gromiti@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/26 15:28:00 by gromiti           #+#    #+#             */
-/*   Updated: 2024/05/28 16:49:25 by gromiti          ###   ########.fr       */
+/*   Updated: 2024/06/12 17:45:12 by gromiti          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,14 @@
 # include <stdio.h> // REMOVE
 
 # include "../libft/libft.h"
+
+// cheapest_struct
+typedef struct cheapest
+{
+	int	elem;
+	int	ind;
+	int	price;
+}	t_cheapest;
 
 // args.c
 int		max_min_check(char *s);
@@ -46,6 +54,9 @@ void	rb(int *b, int *b_elem);
 void	rr(int *a, int *b, int *a_elem, int *b_elem);
 
 // sort_till_3.c
+int		get_biggest(int *s, int *s_elem);
+int		get_smallest(int *s, int *s_elem);
+int		get_index(int n, int *s, int *s_elem);
 void	sort_till_3(int *a, int *b, int *a_elem, int *b_elem);
 
 // sort.c
