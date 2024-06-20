@@ -6,55 +6,55 @@
 /*   By: gromiti <gromiti@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/27 18:09:37 by gromiti           #+#    #+#             */
-/*   Updated: 2024/05/27 18:31:56 by gromiti          ###   ########.fr       */
+/*   Updated: 2024/06/20 11:22:58 by gromiti          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../incl/push_swap.h"
 
-void	slide_down(int *stack, int *elem)
+void	slide_down(int *s, int *el)
 {
 	int	i;
 
-	i = *elem + 1;
+	i = *el + 1;
 	while (i-- > 0)
-		stack[i] = stack[i - 1];
+		s[i] = s[i - 1];
 }
 
-void	slide_up(int *stack, int *elem)
+void	slide_up(int *s, int *el)
 {
 	int	i;
 
 	i = -1;
-	while (i++ < *elem)
-		stack[i] = stack[i + 1];
-	stack[i] = 0;
+	while (i++ < *el)
+		s[i] = s[i + 1];
+	s[i] = 0;
 }
 
-void	pa(int *a, int *b, int *a_elem, int *b_elem)
+void	pa(int *a, int *b, int *a_n, int *b_n)
 {
-	if (*b_elem > 0)
+	if (*b_n > 0)
 	{
-		slide_down(a, a_elem);
+		slide_down(a, a_n);
 		a[0] = b[0];
 		b[0] = 0;
-		(*a_elem)++;
-		(*b_elem)--;
-		slide_up(b, b_elem);
+		(*a_n)++;
+		(*b_n)--;
+		slide_up(b, b_n);
 		write(1, "pa\n", 3);
 	}
 }
 
-void	pb(int *a, int *b, int *a_elem, int *b_elem)
+void	pb(int *a, int *b, int *a_n, int *b_n)
 {
-	if (*a_elem > 0)
+	if (*a_n > 0)
 	{
-		slide_down(b, b_elem);
+		slide_down(b, b_n);
 		b[0] = a[0];
 		a[0] = 0;
-		(*b_elem)++;
-		(*a_elem)--;
-		slide_up(a, a_elem);
+		(*b_n)++;
+		(*a_n)--;
+		slide_up(a, a_n);
 		write(1, "pb\n", 3);
 	}
 }
