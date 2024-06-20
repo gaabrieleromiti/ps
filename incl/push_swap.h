@@ -6,7 +6,7 @@
 /*   By: gromiti <gromiti@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/26 15:28:00 by gromiti           #+#    #+#             */
-/*   Updated: 2024/06/20 12:25:29 by gromiti          ###   ########.fr       */
+/*   Updated: 2024/06/20 18:21:10 by gromiti          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,8 +34,19 @@ int		dupl_check(int argc, char **argv);
 int		ord_check(int argc, char **argv);
 void	args_check_parse(int argc, char **argv, int *a, int *b);
 
+// cheapest.c
+void	check_cheapest(int *buff, int *cheapest, int ind);
+int		*get_cheapest(int *a, int *a_n, int *b, int *b_n);
+void	apply_cheapest(int *a, int *a_n, int *b, int *b_n);
+
 // free.c
 void	free_err_check(int *a, int *b, int err);
+
+// get_moves.c
+int		get_r_r(int index, int spot);
+int		get_rr_r(int *a_n, int index, int spot);
+int		get_rr_rr(int *a_n, int *b_n, int index, int spot);
+int		get_r_rr(int *b_n, int index, int spot);
 
 // push.c
 void	slide_down(int *s, int *el);
@@ -52,12 +63,6 @@ void	rrr(int *a, int *b, int *a_n, int *b_n);
 void	ra(int *a, int *a_n);
 void	rb(int *b, int *b_n);
 void	rr(int *a, int *b, int *a_n, int *b_n);
-
-// rotations.c
-void	check_cheapest(int *buff, int *cheapest, int ind);
-int		*get_cheapest(int *a, int *a_n, int *b, int *b_n);
-void	apply_cheapest(int *a, int *a_n, int *b, int *b_n);
-
 
 // sort_till_3.c
 int		biggest(int *s, int *s_n);
