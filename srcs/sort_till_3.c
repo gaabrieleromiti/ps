@@ -6,7 +6,7 @@
 /*   By: gromiti <gromiti@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/28 16:48:43 by gromiti           #+#    #+#             */
-/*   Updated: 2024/06/12 18:37:47 by gromiti          ###   ########.fr       */
+/*   Updated: 2024/06/18 17:25:37 by gromiti          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,9 +52,27 @@ int get_index(int n, int *s, int *s_elem)
 		if (s[i] == n)
 			return (i);
 	}
+	return (i);
 }
 
-	t_cheapest get_cheapest(int *a, int *a_elem, int *b, int *b_elem)
+int	get_place(int n, int *s, int *s_elem)
+{
+	int	i;
+
+	i = -1;
+	if (n > get_biggest(s, s_elem) || n < get_smallest(s, s_elem))
+		return (get_index(get_biggest(s, s_elem), s, s_elem));
+	while (i++ < *s_elem)
+	{
+		if ((i == *s_elem - 1) && (n > s[i] && n < s[0]))
+			return (0);
+		else if (n < s[i] && n > s[i + 1])
+			return (i + 1);
+	}
+	return (i);
+}
+
+t_cheapest get_cheapest(int *a, int *a_elem, int *b, int *b_elem)
 {
 	int	i;
 	int	j;
@@ -66,9 +84,13 @@ int get_index(int n, int *s, int *s_elem)
 	sma = get_smallest(a, a_elem);
 	while (i < *a_elem)
 	{
+		j = 0;
 		if (a[i] > big || a[i] < sma)
 		{
-			
+			while (j < *b_elem)
+			{
+
+			}
 		}
 		j = 0;
 	}
