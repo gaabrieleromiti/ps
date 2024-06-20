@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   rotations.c                                        :+:      :+:    :+:   */
+/*   cheapest.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gromiti <gromiti@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/20 10:38:57 by gromiti           #+#    #+#             */
-/*   Updated: 2024/06/20 12:25:32 by gromiti          ###   ########.fr       */
+/*   Updated: 2024/06/20 18:18:55 by gromiti          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,10 +37,10 @@ int	*get_cheapest(int *a, int *a_n, int *b, int *b_n)
 	i = -1;
 	while (i++ < *a_n)
 	{
-		buff[0] = index(a[i], a, a_n) + spot(a[i], b, b_n); // r r
-		buff[1] = *a_n - index(a[0], a, a_n) + spot(a[0], b, b_n); // rr r
-		buff[2] = *a_n - index(a[0], a, a_n) + *b_n - spot(a[0], b, b_n); // rr rr
-		buff[3] = index(a[0], a, a_n) + *b_n - spot(a[0], b, b_n); // r rr
+		buff[0] = get_r_r(index(a[i], a, a_n), spot(a[i], b, b_n));
+		buff[1] = get_rr_r(a_n, index(a[i], a, a_n), spot(a[i], b, b_n));
+		buff[2] = get_rr_rr(a_n, b_n, index(a[i], a, a_n), spot(a[i], b, b_n));
+		buff[3] = get_r_rr(b_n, index(a[i], a, a_n), spot(a[i], b, b_n));
 		check_cheapest(buff, cheapest, i);
 	}
 	free(buff);
@@ -52,5 +52,6 @@ void	apply_cheapest(int *a, int *a_n, int *b, int *b_n)
 	int	*cheapest;
 
 	cheapest = get_cheapest(a, a_n, b, b_n);
+	if (cheapest[2] == 0)
 
 }
