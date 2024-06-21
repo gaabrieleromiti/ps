@@ -6,34 +6,34 @@
 /*   By: gromiti <gromiti@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/20 18:18:27 by gromiti           #+#    #+#             */
-/*   Updated: 2024/06/21 10:23:30 by gromiti          ###   ########.fr       */
+/*   Updated: 2024/06/21 10:55:10 by gromiti          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../incl/push_swap.h"
 
-int	get_r_r(int index, int spot)
+int	get_r_r(int ind, int sp)
 {
-	if (index > spot)
-		return (index);
+	if (ind > sp)
+		return (ind);
 	else
-		return (spot);
+		return (sp);
 }
 
-int	get_rr_r(int *a_n, int index, int spot)
+int	get_rr_r(int *a_n, int ind, int sp)
 {
-	return (*a_n - index + spot);
+	return (*a_n - ind + sp);
 }
 
-int	get_rr_rr(int *a_n, int *b_n, int index, int spot)
+int	get_rr_rr(int *a_n, int *b_n, int ind, int sp)
 {
-	if (*a_n - index >= *b_n - spot)
-		return (*a_n - index);
+	if (*a_n - ind >= *b_n - sp)
+		return (*a_n - ind);
 	else
-		return (*b_n - spot);
+		return (*b_n - sp);
 }
 
-int	get_r_rr(int *b_n, int index, int spot)
+int	get_r_rr(int *b_n, int ind, int sp)
 {
-	return (index + *b_n - spot);
+	return (ind + *b_n - sp);
 }
