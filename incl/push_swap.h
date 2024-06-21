@@ -6,7 +6,7 @@
 /*   By: gromiti <gromiti@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/26 15:28:00 by gromiti           #+#    #+#             */
-/*   Updated: 2024/06/21 12:14:58 by gromiti          ###   ########.fr       */
+/*   Updated: 2024/06/21 12:35:41 by gromiti          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,7 +65,7 @@ void	rr(int *a, int *b, int *a_n, int *b_n);
 // sort_till_3.c
 int		biggest(int *s, int *s_n);
 int		smallest(int *s, int *s_n);
-int		index(int n, int *s, int *s_n);
+int		get_ind(int n, int *s, int *s_n);
 int		spot(int n, int *s, int *s_n);
 void	sort_till_3(int *a, int *b, int *a_n, int *b_n);
 

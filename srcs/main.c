@@ -6,7 +6,7 @@
 /*   By: gromiti <gromiti@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/25 17:56:31 by gromiti           #+#    #+#             */
-/*   Updated: 2024/06/20 11:22:04 by gromiti          ###   ########.fr       */
+/*   Updated: 2024/06/21 12:34:59 by gromiti          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,11 +32,10 @@ int	main(int argc, char **argv)
 	sort(a, b, &a_n, &b_n);
 
 
-	// pb(a, b, &a_n, &b_n);
-	// int	i = -1;
+	int	i = -1;
 
-	// while(i++ < argc - 2)
-	// 	printf("%d\n", a[i]);
+	while(i++ < argc - 2)
+		printf("%d		%d\n", a[i], b[i]);
 
 	// i = -1;
 
