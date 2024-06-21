@@ -6,7 +6,7 @@
 /*   By: gromiti <gromiti@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/26 15:28:00 by gromiti           #+#    #+#             */
-/*   Updated: 2024/06/20 18:21:10 by gromiti          ###   ########.fr       */
+/*   Updated: 2024/06/21 11:05:00 by gromiti          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,9 @@ typedef struct cheapest
 	int	ind;
 	int	price;
 }	t_cheapest;
+
+// apply_moves.c
+void	apply_r_r(int *a, int *a_n, int *b, int *b_n);
 
 // args.c
 int		max_min_check(char *s);

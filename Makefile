@@ -6,7 +6,7 @@
 #    By: gromiti <gromiti@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/05/25 17:21:30 by gromiti           #+#    #+#              #
-#    Updated: 2024/06/20 18:20:39 by gromiti          ###   ########.fr        #
+#    Updated: 2024/06/21 10:29:28 by gromiti          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,9 +14,9 @@ NAME = push_swap
 
 LIBFT =libft.a
 
-SRCS = srcs/args.c srcs/cheapest.c srcs/free.c srcs/get_moves.c srcs/main.c \
-		srcs/push.c srcs/r_rotate.c srcs/rotate.c srcs/sort_till_3.c \
-		srcs/sort.c srcs/swap.c \
+SRCS = srcs/apply_moves.c srcs/args.c srcs/cheapest.c srcs/free.c \
+		srcs/get_moves.c srcs/main.c srcs/push.c srcs/r_rotate.c \
+		srcs/rotate.c srcs/sort_till_3.c srcs/sort.c srcs/swap.c \
 
 OBJS = $(SRCS:%.c=%.o)
 
