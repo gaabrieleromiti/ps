@@ -6,7 +6,7 @@
 /*   By: gromiti <gromiti@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/21 10:29:36 by gromiti           #+#    #+#             */
-/*   Updated: 2024/06/21 12:30:30 by gromiti          ###   ########.fr       */
+/*   Updated: 2024/06/21 12:36:59 by gromiti          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ void	apply_rr_r(int *a, int *a_n, int *b, int *b_n)
 	free(cheap);
 }
 
-void	appply_rr_rr(int *a, int *a_n, int *b, int *b_n)
+void	apply_rr_rr(int *a, int *a_n, int *b, int *b_n)
 {
 	int	*cheap;
 
