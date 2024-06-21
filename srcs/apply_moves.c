@@ -6,7 +6,7 @@
 /*   By: gromiti <gromiti@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/21 10:29:36 by gromiti           #+#    #+#             */
-/*   Updated: 2024/06/21 11:04:28 by gromiti          ###   ########.fr       */
+/*   Updated: 2024/06/21 12:26:12 by gromiti          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,27 +14,56 @@
 
 void	apply_r_r(int *a, int *a_n, int *b, int *b_n)
 {
-	int	*cheapest;
-	int	ind;
-	int	sp;
+	int	*cheap;
 
-	cheapest = get_cheapest(a, a_n, b, b_n);
-	ind = index(cheapest[1], a, a_n);
-	sp = spot(cheapest[1], b, b_n);
-	if (ind > sp)
-	{
-		while (sp-- >= 0)
-			rr(a, b, a_n, b_n);
-		while (ind-- >= 0)
-			ra(a, a_n);
-	}
-	else
-	{
-		while (ind-- >= 0)
-			rr(a, b, a_n, b_n);
-		while (sp-- >= 0)
-			rb(b, b_n);
-	}
+	cheap = get_cheap(a, a_n, b, b_n);
+	while (a[0] != cheap[1] && spot(cheap[1], b, b_n) > 0)
+		rr(a, b, a_n, b_n);
+	while (a[0] != cheap[1])
+		ra(a, a_n);
+	while (spot(cheap[1], b, b_n) > 0)
+		rb(b, b_n);
 	pb(a, b, a_n, b_n);
-	free(cheapest);
+	free(cheap);
+}
+
+void	apply_rr_r(int *a, int *a_n, int *b, int *b_n)
+{
+	int	*cheap;
+
+	cheap = get_cheap(a, a_n, b, b_n);
+	while (a[0] != cheap[1])
+		rra(a, a_n);
+	while (spot(cheap[1], b, b_n) != 0)
+		rb(b, b_n);
+	pb(a, b, a_n, b_n);
+	free(cheap);
+}
+
+void	appply_rr_rr(int *a, int *a_n, int *b, int *b_n)
+{
+	int	*cheap;
+
+	cheap = get_cheap(a, a_n, b, b_n);
+	while (a[0] != cheap[1] && spot(cheap[1], b, b_n) > 0)
+		rrr(a, b, a_n, b_n);
+	while (a[0] != cheap[1])
+		rra(a, a_n);
+	while (spot(cheap[1], b, b_n) > 0)
+		rrb(b, b_n);
+	pb(a, b, a_n, b_n);
+	free(cheap);
+}
+
+void	apply_r_rr(int *a, int *a_n, int *b, int *b_n)
+{
+	int	*cheap;
+
+	cheap = get_cheap(a, a_n, b, b_n);
+	while (a[0] != cheap[1])
+		ra(a, a_n);
+	while (spot(cheap[1], b, b_n) != 0)
+		rrb(b, b_n);
+	pb(a, b, a_n, b_n);
+	free(cheap);
 }
