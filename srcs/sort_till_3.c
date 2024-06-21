@@ -6,7 +6,7 @@
 /*   By: gromiti <gromiti@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/28 16:48:43 by gromiti           #+#    #+#             */
-/*   Updated: 2024/06/21 16:59:37 by gromiti          ###   ########.fr       */
+/*   Updated: 2024/06/21 21:54:46 by gromiti          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,6 +80,15 @@ void	sort_till_3(int *a, int *b, int *a_n, int *b_n)
 	pb(a, b, a_n, b_n);
 	if (b[0] < b[1])
 		sb(b);
-	while (*a_n > 3)
+	while (*a_n > 0)
 		apply_cheap(a, a_n, b, b_n);
+	while (get_ind(biggest(b, b_n), b, b_n) != 0)
+	{
+		if (get_ind(biggest(b, b_n), b, b_n) < *b_n / 2)
+			rb(b, b_n);
+		else
+			rrb(b, b_n);
+	}
+	while (*b_n > 0)
+		pa(a, b, a_n, b_n);
 }

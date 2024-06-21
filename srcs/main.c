@@ -6,7 +6,7 @@
 /*   By: gromiti <gromiti@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/25 17:56:31 by gromiti           #+#    #+#             */
-/*   Updated: 2024/06/21 17:02:40 by gromiti          ###   ########.fr       */
+/*   Updated: 2024/06/21 21:48:42 by gromiti          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,13 +43,13 @@ int	main(int argc, char **argv)
 	// 	printf("%d		%d\n", a[i], b[i]);
 	// exit(0);
 	sort(a, b, &a_n, &b_n);
-	free_err_check(a, b, 0);
 
-	// int	i = -1;
+	int	i = -1;
 
-	// while(i++ < argc - 2)
-	// 	printf("%d		%d\n", a[i], b[i]);
-
+	while(i++ < argc - 2)
+		printf("%d		%d\n", a[i], b[i]);
+	return (0);
+	// free_err_check(a, b, 0);
 	// i = -1;
 
 	// while (i++ < argc - 2)

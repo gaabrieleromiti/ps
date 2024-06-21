@@ -6,7 +6,7 @@
 /*   By: gromiti <gromiti@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/20 10:38:57 by gromiti           #+#    #+#             */
-/*   Updated: 2024/06/21 16:59:10 by gromiti          ###   ########.fr       */
+/*   Updated: 2024/06/21 21:45:53 by gromiti          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,6 @@ void	check_cheap(int *moves, int *cheap, int n)
 			cheap[2] = mvoe_code;
 		}
 	}
-
 }
 
 int	*get_cheap(int *a, int *a_n, int *b, int *b_n)
