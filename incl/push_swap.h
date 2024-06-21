@@ -6,7 +6,7 @@
 /*   By: gromiti <gromiti@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/26 15:28:00 by gromiti           #+#    #+#             */
-/*   Updated: 2024/06/21 11:05:00 by gromiti          ###   ########.fr       */
+/*   Updated: 2024/06/21 12:14:58 by gromiti          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,16 +19,11 @@
 
 # include "../libft/libft.h"
 
-// cheapest_struct
-typedef struct cheapest
-{
-	int	el;
-	int	ind;
-	int	price;
-}	t_cheapest;
-
 // apply_moves.c
 void	apply_r_r(int *a, int *a_n, int *b, int *b_n);
+void	apply_rr_r(int *a, int *a_n, int *b, int *b_n);
+void	apply_rr_rr(int *a, int *a_n, int *b, int *b_n);
+void	apply_r_rr(int *a, int *a_n, int *b, int *b_n);
 
 // args.c
 int		max_min_check(char *s);
@@ -38,9 +33,9 @@ int		ord_check(int argc, char **argv);
 void	args_check_parse(int argc, char **argv, int *a, int *b);
 
 // cheapest.c
-void	check_cheapest(int *buff, int *cheapest, int ind);
-int		*get_cheapest(int *a, int *a_n, int *b, int *b_n);
-void	apply_cheapest(int *a, int *a_n, int *b, int *b_n);
+void	check_cheap(int *buff, int *cheap, int ind);
+int		*get_cheap(int *a, int *a_n, int *b, int *b_n);
+void	apply_cheap(int *a, int *a_n, int *b, int *b_n);
 
 // free.c
 void	free_err_check(int *a, int *b, int err);
