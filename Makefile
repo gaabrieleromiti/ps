@@ -6,7 +6,7 @@
 #    By: gromiti <gromiti@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/05/25 17:21:30 by gromiti           #+#    #+#              #
-#    Updated: 2024/06/27 17:27:51 by gromiti          ###   ########.fr        #
+#    Updated: 2024/06/27 17:55:02 by gromiti          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ NAME = push_swap
 
 BONUS = checker
 
-LIBFT =libft.a
+LIBFT = libft.a
 
 SRCS = srcs/push_swap/apply_moves.c srcs/push_swap/args.c \
 		srcs/push_swap/cheapest.c srcs/push_swap/free.c \
@@ -23,7 +23,7 @@ SRCS = srcs/push_swap/apply_moves.c srcs/push_swap/args.c \
 		srcs/push_swap/rotate.c srcs/push_swap/sort_till_3.c \
 		srcs/push_swap/sort.c srcs/push_swap/swap.c \
 
-BONUS_SRCS = srcs/checker/checker.c srcs/checker_utils.c
+BONUS_SRCS = srcs/checker/checker.c
 
 OBJS = $(SRCS:%.c=%.o)
 BONUS_OBJ = $(BONUS_SRCS:%.c=%.o)
@@ -49,6 +49,8 @@ $(LIBFT):
 	$(MAKE) -C ./libft
 
 all: $(NAME) $(BONUS)
+
+bonus: $(BONUS)
 
 clean:
 	$(RM) $(OBJS) $(BONUS_OBJ)
