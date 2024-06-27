@@ -6,11 +6,11 @@
 /*   By: gromiti <gromiti@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/27 18:26:52 by gromiti           #+#    #+#             */
-/*   Updated: 2024/05/27 18:34:19 by gromiti          ###   ########.fr       */
+/*   Updated: 2024/06/27 17:36:25 by gromiti          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../incl/push_swap.h"
+#include "../../incl/push_swap.h"
 
 void	sa(int *a)
 {

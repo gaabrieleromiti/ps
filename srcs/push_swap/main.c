@@ -6,11 +6,11 @@
 /*   By: gromiti <gromiti@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/25 17:56:31 by gromiti           #+#    #+#             */
-/*   Updated: 2024/06/27 16:27:01 by gromiti          ###   ########.fr       */
+/*   Updated: 2024/06/27 17:35:40 by gromiti          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../incl/push_swap.h"
+#include "../../incl/push_swap.h"
 
 int	main(int argc, char **argv)
 {

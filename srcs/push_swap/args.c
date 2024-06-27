@@ -6,11 +6,11 @@
 /*   By: gromiti <gromiti@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/26 17:05:16 by gromiti           #+#    #+#             */
-/*   Updated: 2024/06/24 17:27:10 by gromiti          ###   ########.fr       */
+/*   Updated: 2024/06/27 17:35:16 by gromiti          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../incl/push_swap.h"
+#include "../../incl/push_swap.h"
 
 int	max_min_check(char *s)
 {

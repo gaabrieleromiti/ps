@@ -6,11 +6,11 @@
 /*   By: gromiti <gromiti@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/21 10:29:36 by gromiti           #+#    #+#             */
-/*   Updated: 2024/06/21 21:41:15 by gromiti          ###   ########.fr       */
+/*   Updated: 2024/06/27 17:35:01 by gromiti          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../incl/push_swap.h"
+#include "../../incl/push_swap.h"
 
 void	apply_r_r(int *a, int *a_n, int *b, int *b_n)
 {
