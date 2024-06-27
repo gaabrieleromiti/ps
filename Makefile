@@ -6,19 +6,27 @@
 #    By: gromiti <gromiti@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/05/25 17:21:30 by gromiti           #+#    #+#              #
-#    Updated: 2024/06/21 21:41:30 by gromiti          ###   ########.fr        #
+#    Updated: 2024/06/27 17:27:51 by gromiti          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = push_swap
 
+BONUS = checker
+
 LIBFT =libft.a
 
-SRCS = srcs/apply_moves.c srcs/args.c srcs/cheapest.c srcs/free.c \
-		srcs/get_moves.c srcs/main.c srcs/push.c srcs/r_rotate.c \
-		srcs/rotate.c srcs/sort_till_3.c srcs/sort.c srcs/swap.c \
+SRCS = srcs/push_swap/apply_moves.c srcs/push_swap/args.c \
+		srcs/push_swap/cheapest.c srcs/push_swap/free.c \
+		srcs/push_swap/get_moves.c srcs/push_swap/main.c \
+		srcs/push_swap/push.c srcs/push_swap/r_rotate.c \
+		srcs/push_swap/rotate.c srcs/push_swap/sort_till_3.c \
+		srcs/push_swap/sort.c srcs/push_swap/swap.c \
+
+BONUS_SRCS = srcs/checker/checker.c srcs/checker_utils.c
 
 OBJS = $(SRCS:%.c=%.o)
+BONUS_OBJ = $(BONUS_SRCS:%.c=%.o)
 
 CC = gcc
 
@@ -34,17 +42,20 @@ INC = -I./incl -I./libft
 $(NAME): $(OBJS) $(LIBFT)
 	$(CC) $(CFLAGS) $(OBJS) -L ./libft -lft -o $(NAME)
 
+$(BONUS): $(BONUS_OBJ) $(LIBFT)
+	$(CC) $(CFLAGS) $(BONUS_OBJ) -L ./libft -lft -o $(BONUS)
+
 $(LIBFT):
 	$(MAKE) -C ./libft
 
-all: $(NAME)
+all: $(NAME) $(BONUS)
 
 clean:
-	$(RM) $(OBJS)
+	$(RM) $(OBJS) $(BONUS_OBJ)
 	$(MAKE) clean -C ./libft
 
 fclean: clean
-	$(RM) $(NAME)
+	$(RM) $(NAME) $(BONUS)
 	$(MAKE) fclean -C ./libft
 
 re: fclean all
