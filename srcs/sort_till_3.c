@@ -6,7 +6,7 @@
 /*   By: gromiti <gromiti@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/28 16:48:43 by gromiti           #+#    #+#             */
-/*   Updated: 2024/06/21 21:54:46 by gromiti          ###   ########.fr       */
+/*   Updated: 2024/06/27 16:28:16 by gromiti          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ int	smallest(int *s, int *s_n)
 	return (res);
 }
 
-int	get_ind(int n, int *s, int *s_n)
+int	ind(int n, int *s, int *s_n)
 {
 	int	i;
 
@@ -61,7 +61,7 @@ int	spot(int n, int *s, int *s_n)
 
 	i = -1;
 	if (n > biggest(s, s_n) || n < smallest(s, s_n))
-		return (get_ind(biggest(s, s_n), s, s_n));
+		return (ind(biggest(s, s_n), s, s_n));
 	while (++i < *s_n)
 	{
 		if ((i == *s_n - 1) && (n > s[i] && n < s[0]))
@@ -82,9 +82,9 @@ void	sort_till_3(int *a, int *b, int *a_n, int *b_n)
 		sb(b);
 	while (*a_n > 0)
 		apply_cheap(a, a_n, b, b_n);
-	while (get_ind(biggest(b, b_n), b, b_n) != 0)
+	while (ind(biggest(b, b_n), b, b_n) != 0)
 	{
-		if (get_ind(biggest(b, b_n), b, b_n) < *b_n / 2)
+		if (ind(biggest(b, b_n), b, b_n) < *b_n / 2)
 			rb(b, b_n);
 		else
 			rrb(b, b_n);

@@ -6,7 +6,7 @@
 /*   By: gromiti <gromiti@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/25 17:56:31 by gromiti           #+#    #+#             */
-/*   Updated: 2024/06/27 16:10:33 by gromiti          ###   ########.fr       */
+/*   Updated: 2024/06/27 16:27:01 by gromiti          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,4 +30,3 @@ int	main(int argc, char **argv)
 	free_err_check(a, b, 0);
 	return (0);
 }
-

@@ -6,7 +6,7 @@
 /*   By: gromiti <gromiti@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/27 18:19:50 by gromiti           #+#    #+#             */
-/*   Updated: 2024/06/21 17:21:19 by gromiti          ###   ########.fr       */
+/*   Updated: 2024/06/27 16:31:21 by gromiti          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,8 +40,8 @@ void	rrb(int *b, int *b_n)
 
 void	rrr(int *a, int *b, int *a_n, int *b_n)
 {
-	int i;
-	int tmp;
+	int	i;
+	int	tmp;
 
 	i = *a_n;
 	tmp = a[i - 1];

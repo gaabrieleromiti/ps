@@ -6,7 +6,7 @@
 /*   By: gromiti <gromiti@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/26 15:28:00 by gromiti           #+#    #+#             */
-/*   Updated: 2024/06/21 21:40:29 by gromiti          ###   ########.fr       */
+/*   Updated: 2024/06/27 16:29:31 by gromiti          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,6 @@
 # include <stddef.h>
 # include <stdlib.h>
 # include <unistd.h>
-# include <stdio.h> // REMOVE
-
 # include "../libft/libft.h"
 
 // apply_moves.c
@@ -65,9 +63,8 @@ void	rr(int *a, int *b, int *a_n, int *b_n);
 // sort_till_3.c
 int		biggest(int *s, int *s_n);
 int		smallest(int *s, int *s_n);
-int		get_ind(int n, int *s, int *s_n);
+int		ind(int n, int *s, int *s_n);
 int		spot(int n, int *s, int *s_n);
-int		spot_a(int n, int *a, int *a_n);
 void	sort_till_3(int *a, int *b, int *a_n, int *b_n);
 
 // sort.c
