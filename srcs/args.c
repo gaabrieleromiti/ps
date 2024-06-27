@@ -6,7 +6,7 @@
 /*   By: gromiti <gromiti@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/26 17:05:16 by gromiti           #+#    #+#             */
-/*   Updated: 2024/05/27 18:36:00 by gromiti          ###   ########.fr       */
+/*   Updated: 2024/06/24 17:27:10 by gromiti          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 int	max_min_check(char *s)
 {
-	long int res;
-	int sign;
+	long int	res;
+	int			sign;
 
 	res = 0;
 	sign = 1;
@@ -37,15 +37,19 @@ int	max_min_check(char *s)
 
 int	digit_check(int argc, char **argv)
 {
-	int i;
-	int j;
+	int	i;
+	int	j;
 
 	i = 1;
-	while (i < argc - 1)
+	while (i < argc)
 	{
 		j = 0;
+		if (!argv[i][j])
+			return (2);
 		while (argv[i][j])
 		{
+			if (argv[i][0] == '-' && ft_strlen(argv[i]) > 1)
+				j++;
 			if (!max_min_check(argv[i]) || !ft_isdigit(argv[i][j]))
 				return (2);
 			j++;
@@ -57,8 +61,8 @@ int	digit_check(int argc, char **argv)
 
 int	dupl_check(int argc, char **argv)
 {
-	int i;
-	int j;
+	int	i;
+	int	j;
 
 	i = 0;
 	while (i++ < argc - 1)
@@ -76,8 +80,8 @@ int	dupl_check(int argc, char **argv)
 
 int	ord_check(int argc, char **argv)
 {
-	int i;
-	int j;
+	int	i;
+	int	j;
 
 	i = 0;
 	while (i++ < argc - 1)
@@ -94,7 +98,7 @@ int	ord_check(int argc, char **argv)
 
 void	args_check_parse(int argc, char **argv, int *a, int *b)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	if (digit_check(argc, argv) == 2 || dupl_check(argc, argv) == 2)
