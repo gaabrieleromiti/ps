@@ -6,20 +6,20 @@
 /*   By: gromiti <gromiti@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/28 15:34:41 by gromiti           #+#    #+#             */
-/*   Updated: 2024/06/27 17:36:14 by gromiti          ###   ########.fr       */
+/*   Updated: 2024/07/03 17:13:42 by gromiti          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../incl/push_swap.h"
 
-void	sort_2(int *a)
+void	sort_2(int *a, int *b)
 {
 	if (a[0] > a[1])
 		sa(a);
-	free_err_check(a, NULL, 0);
+	free_err_check(a, b, 0);
 }
 
-void	sort_3(int *a, int *a_n)
+void	sort_3(int *a, int *a_n, int *b)
 {
 	if (a[0] < a[1] && a[1] > a[2] && a[0] < a[2])
 	{
@@ -37,15 +37,15 @@ void	sort_3(int *a, int *a_n)
 		sa(a);
 		rra(a, a_n);
 	}
-	free_err_check(a, NULL, 0);
+	free_err_check(a, b, 0);
 }
 
 void	sort(int *a, int *b, int *a_n, int *b_n)
 {
 	if (*a_n == 2)
-		sort_2(a);
+		sort_2(a, b);
 	else if (*a_n == 3)
-		sort_3(a, a_n);
+		sort_3(a, a_n, b);
 	else if (*a_n > 3)
 		sort_till_3(a, b, a_n, b_n);
 }
