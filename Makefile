@@ -6,7 +6,7 @@
 #    By: gromiti <gromiti@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/05/25 17:21:30 by gromiti           #+#    #+#              #
-#    Updated: 2024/06/28 16:38:31 by gromiti          ###   ########.fr        #
+#    Updated: 2024/07/03 16:20:14 by gromiti          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,7 +25,7 @@ PKG = srcs/push_swap/apply_moves.c srcs/push_swap/args.c \
 
 SRCS = srcs/push_swap/main.c $(PKG)
 
-BONUS_SRCS = srcs/checker/checker.c $(PKG)
+BONUS_SRCS = srcs/checker/checker.c srcs/checker/checker_utils.c $(PKG)
 
 OBJS = $(SRCS:%.c=%.o)
 BONUS_OBJ = $(BONUS_SRCS:%.c=%.o)

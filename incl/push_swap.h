@@ -6,7 +6,7 @@
 /*   By: gromiti <gromiti@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/26 15:28:00 by gromiti           #+#    #+#             */
-/*   Updated: 2024/07/03 16:16:01 by gromiti          ###   ########.fr       */
+/*   Updated: 2024/07/03 16:20:42 by gromiti          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ typedef struct s_stack
 void	free_ok_ko(t_stack a, t_stack b, char *line, int err);
 void	check_and_parse(int argc, char **argv, int *a, int *b);
 void	check_and_exit(t_stack a, t_stack b, char *line);
+int		is_sorted(int *s, int s_n);
 
 // srcs/checker/checker.c
 void	get_apply(char *line, t_stack a, t_stack b);
