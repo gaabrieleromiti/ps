@@ -6,7 +6,7 @@
 /*   By: gromiti <gromiti@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/26 15:28:00 by gromiti           #+#    #+#             */
-/*   Updated: 2024/06/28 16:31:42 by gromiti          ###   ########.fr       */
+/*   Updated: 2024/07/03 16:16:01 by gromiti          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,21 @@
 # include <stdlib.h>
 # include <unistd.h>
 # include "../libft/libft.h"
+# include <stdio.h> //to be removed
+
+typedef struct s_stack
+{
+	int	*stack;
+	int	*stack_n;
+} t_stack;
+
+// srcs/checker/checker_utils.c
+void	free_ok_ko(t_stack a, t_stack b, char *line, int err);
+void	check_and_parse(int argc, char **argv, int *a, int *b);
+void	check_and_exit(t_stack a, t_stack b, char *line);
 
 // srcs/checker/checker.c
-void	check_and_parse(int argc, char **argv, int *a, int *b);
-void	get_apply(int *a, int *a_n, int *b, int *b_n);
+void	get_apply(char *line, t_stack a, t_stack b);
 
 // srcs/push_swap/apply_moves.c
 void	apply_r_r(int *a, int *a_n, int *b, int *b_n);
