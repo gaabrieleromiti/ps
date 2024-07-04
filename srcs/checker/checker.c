@@ -6,7 +6,7 @@
 /*   By: gromiti <gromiti@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/27 17:29:19 by gromiti           #+#    #+#             */
-/*   Updated: 2024/07/03 16:15:03 by gromiti          ###   ########.fr       */
+/*   Updated: 2024/07/04 14:58:27 by gromiti          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,7 @@ int	main(int argc, char **argv)
 	*(b.stack_n) = 0;
 	check_and_parse(argc, argv, a.stack, b.stack);
 	line = get_next_line(0);
-	while (line)
+	while (line != NULL)
 	{
 		get_apply(line, a, b);
 		free(line);

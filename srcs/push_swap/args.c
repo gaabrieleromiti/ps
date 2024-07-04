@@ -6,7 +6,7 @@
 /*   By: gromiti <gromiti@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/26 17:05:16 by gromiti           #+#    #+#             */
-/*   Updated: 2024/07/03 16:53:25 by gromiti          ###   ########.fr       */
+/*   Updated: 2024/07/04 14:51:58 by gromiti          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,10 +46,10 @@ int	digit_check(int argc, char **argv)
 		j = 0;
 		if (!argv[i][j])
 			return (2);
-		while (argv[i][j])
+		if (argv[i][0] == '-' && ft_strlen(argv[i]) > 1)
+			j++;
+		while (argv[i][j] != '\0')
 		{
-			if (argv[i][0] == '-' && ft_strlen(argv[i]) > 1)
-				j++;
 			if (!max_min_check(argv[i]) || !ft_isdigit(argv[i][j]))
 				return (2);
 			j++;
