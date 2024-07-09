@@ -6,7 +6,7 @@
 /*   By: gromiti <gromiti@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/26 15:28:00 by gromiti           #+#    #+#             */
-/*   Updated: 2024/07/09 17:22:49 by gromiti          ###   ########.fr       */
+/*   Updated: 2024/07/09 17:36:47 by gromiti          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,7 +84,7 @@ void	sort_till_3(int *a, int *b, int *a_n, int *b_n);
 
 // srcs/push_swap/sort.c
 void	sort_2(int *a, int *b);
-void	sort_3(int *a, int *a_n, int *b);
+void	sort_3(int *a, int *a_n, int *b, int *b_n);
 void	sort_4(int *a, int *a_n, int *b, int *b_n);
 void	sort_5(int *a, int *a_n, int *b, int *b_n);
 void	sort(int *a, int *b, int *a_n, int *b_n);
