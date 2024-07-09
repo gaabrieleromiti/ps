@@ -6,7 +6,7 @@
 /*   By: gromiti <gromiti@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/28 15:34:41 by gromiti           #+#    #+#             */
-/*   Updated: 2024/07/03 17:13:42 by gromiti          ###   ########.fr       */
+/*   Updated: 2024/07/09 16:29:37 by gromiti          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,40 @@ void	sort_3(int *a, int *a_n, int *b)
 		sa(a);
 		rra(a, a_n);
 	}
-	free_err_check(a, b, 0);
+	if (b[0] == 0)
+		free_err_check(a, b, 0);
+}
+
+void	sort_4(int *a, int *a_n, int *b, int *b_n)
+{
+	while (ind(smallest(a, a_n), a, a_n) != 0)
+	{
+		if (ind(smallest(a, a_n), a, a_n) <= *a_n / 2)
+			ra(a, a_n);
+		else
+			rra(a, a_n);
+	}
+	pb(a, b, a_n, b_n);
+	sort_3(a, a_n, b);
+	pa(a, b, a_n, b_n);
+}
+
+void	sort_5(int *a, int *a_n, int *b, int *b_n)
+{
+	while(*a_n > 3)
+	{
+		while (ind(smallest(a, a_n), a, a_n) != 0)
+		{
+			if (ind(smallest(a, a_n), a, a_n) <= *a_n / 2)
+				ra(a, a_n);
+			else
+				rra(a, a_n);
+		}
+		pb(a, b, a_n, b_n);
+	}
+	sort_3(a, a_n, b);
+	while (*b_n > 0)
+		pa(a, b, a_n, b_n);
 }
 
 void	sort(int *a, int *b, int *a_n, int *b_n)
@@ -46,6 +79,10 @@ void	sort(int *a, int *b, int *a_n, int *b_n)
 		sort_2(a, b);
 	else if (*a_n == 3)
 		sort_3(a, a_n, b);
-	else if (*a_n > 3)
+	else if (*a_n == 4)
+		sort_4(a, a_n, b, b_n);
+	else if (*a_n == 5)
+		sort_5(a, a_n, b, b_n);
+	else if (*a_n > 5)
 		sort_till_3(a, b, a_n, b_n);
 }
