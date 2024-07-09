@@ -6,7 +6,7 @@
 /*   By: gromiti <gromiti@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/28 15:34:41 by gromiti           #+#    #+#             */
-/*   Updated: 2024/07/09 16:29:37 by gromiti          ###   ########.fr       */
+/*   Updated: 2024/07/09 17:23:14 by gromiti          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,7 @@ void	sort_4(int *a, int *a_n, int *b, int *b_n)
 
 void	sort_5(int *a, int *a_n, int *b, int *b_n)
 {
-	while(*a_n > 3)
+	while (*a_n > 3)
 	{
 		while (ind(smallest(a, a_n), a, a_n) != 0)
 		{

@@ -6,7 +6,7 @@
 /*   By: gromiti <gromiti@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/26 15:28:00 by gromiti           #+#    #+#             */
-/*   Updated: 2024/07/09 16:31:24 by gromiti          ###   ########.fr       */
+/*   Updated: 2024/07/09 17:22:49 by gromiti          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ typedef struct s_stack
 {
 	int	*stack;
 	int	*stack_n;
-} t_stack;
+}	t_stack;
 
 // srcs/checker/checker_utils.c
 void	free_ok_ko(t_stack a, t_stack b, char *line, int err);
