@@ -6,7 +6,7 @@
 /*   By: gromiti <gromiti@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/28 15:34:41 by gromiti           #+#    #+#             */
-/*   Updated: 2024/07/09 17:42:11 by gromiti          ###   ########.fr       */
+/*   Updated: 2024/07/15 18:09:31 by gromiti          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	sort_2(int *a, int *b)
 {
 	if (a[0] > a[1])
-		sa(a);
+		print_sa(a);
 	free_err_check(a, b, 0);
 }
 
@@ -23,19 +23,19 @@ void	sort_3(int *a, int *a_n, int *b, int *b_n)
 {
 	if (a[0] < a[1] && a[1] > a[2] && a[0] < a[2])
 	{
-		sa(a);
-		ra(a, a_n);
+		print_sa(a);
+		print_ra(a, a_n);
 	}
 	else if (a[0] > a[1] && a[1] < a[2] && a[0] < a[2])
-		sa(a);
+		print_sa(a);
 	else if (a[0] < a[1] && a[1] > a[2] && a[0] > a[2])
-		rra(a, a_n);
+		print_rra(a, a_n);
 	else if (a[0] > a[1] && a[1] < a[2] && a[0] > a[2])
-		ra(a, a_n);
+		print_ra(a, a_n);
 	else if (a[0] > a[1] && a[1] > a[2] && a[0] > a[2])
 	{
-		sa(a);
-		rra(a, a_n);
+		print_sa(a);
+		print_rra(a, a_n);
 	}
 	if (*b_n == 0)
 		free_err_check(a, b, 0);
@@ -46,13 +46,13 @@ void	sort_4(int *a, int *a_n, int *b, int *b_n)
 	while (ind(smallest(a, a_n), a, a_n) != 0)
 	{
 		if (ind(smallest(a, a_n), a, a_n) <= *a_n / 2)
-			ra(a, a_n);
+			print_ra(a, a_n);
 		else
-			rra(a, a_n);
+			print_rra(a, a_n);
 	}
-	pb(a, b, a_n, b_n);
+	print_pb(a, b, a_n, b_n);
 	sort_3(a, a_n, b, b_n);
-	pa(a, b, a_n, b_n);
+	print_pa(a, b, a_n, b_n);
 }
 
 void	sort_5(int *a, int *a_n, int *b, int *b_n)
@@ -64,13 +64,13 @@ void	sort_5(int *a, int *a_n, int *b, int *b_n)
 			if (ind(smallest(a, a_n), a, a_n) <= *a_n / 2)
 				ra(a, a_n);
 			else
-				rra(a, a_n);
+				print_rra(a, a_n);
 		}
-		pb(a, b, a_n, b_n);
+		print_pb(a, b, a_n, b_n);
 	}
 	sort_3(a, a_n, b, b_n);
 	while (*b_n > 0)
-		pa(a, b, a_n, b_n);
+		print_pa(a, b, a_n, b_n);
 }
 
 void	sort(int *a, int *b, int *a_n, int *b_n)

@@ -1,43 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   swap.c                                             :+:      :+:    :+:   */
+/*   print_rotate.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gromiti <gromiti@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/27 18:26:52 by gromiti           #+#    #+#             */
-/*   Updated: 2024/07/15 18:05:51 by gromiti          ###   ########.fr       */
+/*   Created: 2024/07/15 18:02:11 by gromiti           #+#    #+#             */
+/*   Updated: 2024/07/15 18:03:22 by gromiti          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../incl/push_swap.h"
 
-void	sa(int *a)
+void print_ra(int *a, int *a_n)
 {
-	int	tmp;
-
-	tmp = a[0];
-	a[0] = a[1];
-	a[1] = tmp;
+	ra(a, a_n);
+	write(1, "ra\n", 3);
 }
 
-void	sb(int *b)
+void print_rb(int *b, int *b_n)
 {
-	int	tmp;
-
-	tmp = b[0];
-	b[0] = b[1];
-	b[1] = tmp;
+	rb(b, b_n);
+	write(1, "rb\n", 3);
 }
 
-void	ss(int *a, int *b)
+void print_rr(int *a, int *b, int *a_n, int *b_n)
 {
-	int	tmp;
-
-	tmp = a[0];
-	a[0] = a[1];
-	a[1] = tmp;
-	tmp = b[0];
-	b[0] = b[1];
-	b[1] = tmp;
+	rr(a, b, a_n, b_n);
+	write(1, "rr\n", 3);
 }

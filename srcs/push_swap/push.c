@@ -6,7 +6,7 @@
 /*   By: gromiti <gromiti@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/27 18:09:37 by gromiti           #+#    #+#             */
-/*   Updated: 2024/06/27 17:35:47 by gromiti          ###   ########.fr       */
+/*   Updated: 2024/07/15 17:42:12 by gromiti          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,6 @@ void	pa(int *a, int *b, int *a_n, int *b_n)
 		(*a_n)++;
 		(*b_n)--;
 		slide_up(b, b_n);
-		write(1, "pa\n", 3);
 	}
 }
 
@@ -55,6 +54,5 @@ void	pb(int *a, int *b, int *a_n, int *b_n)
 		(*b_n)++;
 		(*a_n)--;
 		slide_up(a, a_n);
-		write(1, "pb\n", 3);
 	}
 }

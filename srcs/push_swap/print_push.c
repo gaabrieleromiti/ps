@@ -1,43 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   swap.c                                             :+:      :+:    :+:   */
+/*   print_push.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gromiti <gromiti@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/27 18:26:52 by gromiti           #+#    #+#             */
-/*   Updated: 2024/07/15 18:05:51 by gromiti          ###   ########.fr       */
+/*   Created: 2024/07/15 17:40:57 by gromiti           #+#    #+#             */
+/*   Updated: 2024/07/15 18:08:41 by gromiti          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../incl/push_swap.h"
 
-void	sa(int *a)
+void	print_pa(int *a, int *b, int *a_n, int *b_n)
 {
-	int	tmp;
-
-	tmp = a[0];
-	a[0] = a[1];
-	a[1] = tmp;
+	pa(a, b, a_n, b_n);
+	write(1, "pa\n", 3);
 }
 
-void	sb(int *b)
+void	print_pb(int *a, int *b, int *a_n, int *b_n)
 {
-	int	tmp;
-
-	tmp = b[0];
-	b[0] = b[1];
-	b[1] = tmp;
-}
-
-void	ss(int *a, int *b)
-{
-	int	tmp;
-
-	tmp = a[0];
-	a[0] = a[1];
-	a[1] = tmp;
-	tmp = b[0];
-	b[0] = b[1];
-	b[1] = tmp;
+	pb(a, b, a_n, b_n);
+	write(1, "pb\n", 3);
 }

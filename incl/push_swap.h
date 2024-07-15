@@ -6,7 +6,7 @@
 /*   By: gromiti <gromiti@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/26 15:28:00 by gromiti           #+#    #+#             */
-/*   Updated: 2024/07/09 17:36:47 by gromiti          ###   ########.fr       */
+/*   Updated: 2024/07/15 18:14:14 by gromiti          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,6 +58,25 @@ int		get_r_r(int index, int spot);
 int		get_rr_r(int *a_n, int index, int spot);
 int		get_rr_rr(int *a_n, int *b_n, int index, int spot);
 int		get_r_rr(int *b_n, int index, int spot);
+
+// srcs/push_swap/print_push_swap.c
+void	print_pa(int *a, int *b, int *a_n, int *b_n);
+void	print_pb(int *a, int *b, int *a_n, int *b_n);
+
+// srcs/push_swap/print_r_rotate.c
+void	print_rra(int *a, int *a_n);
+void	print_rrb(int *b, int *b_n);
+void	print_rrr(int *a, int *b, int *a_n, int *b_n);
+
+// srcs/push_swap/print_rotate.c
+void	print_ra(int *a, int *a_n);
+void	print_rb(int *b, int *b_n);
+void	print_rr(int *a, int *b, int *a_n, int *b_n);
+
+// srcs/push_swap/print_swap.c
+void	print_sa(int *a);
+void	print_sb(int *b);
+void	print_ss(int *a, int *b);
 
 // srcs/push_swap/push.c
 void	slide_down(int *s, int *el);

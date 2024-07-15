@@ -6,7 +6,7 @@
 #    By: gromiti <gromiti@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/05/25 17:21:30 by gromiti           #+#    #+#              #
-#    Updated: 2024/07/03 16:20:14 by gromiti          ###   ########.fr        #
+#    Updated: 2024/07/15 18:16:27 by gromiti          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,10 +18,12 @@ LIBFT = libft.a
 
 PKG = srcs/push_swap/apply_moves.c srcs/push_swap/args.c \
 		srcs/push_swap/cheapest.c srcs/push_swap/free.c \
-		srcs/push_swap/get_moves.c \
-		srcs/push_swap/push.c srcs/push_swap/r_rotate.c \
-		srcs/push_swap/rotate.c srcs/push_swap/sort_till_3.c \
-		srcs/push_swap/sort.c srcs/push_swap/swap.c \
+		srcs/push_swap/get_moves.c srcs/push_swap/print_push.c \
+		srcs/push_swap/print_r_rotate.c srcs/push_swap/print_rotate.c \
+		srcs/push_swap/print_swap.c srcs/push_swap/push.c \
+		srcs/push_swap/r_rotate.c srcs/push_swap/rotate.c \
+		srcs/push_swap/sort_till_3.c srcs/push_swap/sort.c \
+		srcs/push_swap/swap.c \
 
 SRCS = srcs/push_swap/main.c $(PKG)
 

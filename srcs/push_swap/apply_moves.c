@@ -6,7 +6,7 @@
 /*   By: gromiti <gromiti@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/21 10:29:36 by gromiti           #+#    #+#             */
-/*   Updated: 2024/06/27 17:35:01 by gromiti          ###   ########.fr       */
+/*   Updated: 2024/07/15 18:13:51 by gromiti          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,12 +23,12 @@ void	apply_r_r(int *a, int *a_n, int *b, int *b_n)
 		free_err_check(a, b, 2);
 	}
 	while (a[0] != cheap[1] && spot(cheap[1], b, b_n) > 0)
-		rr(a, b, a_n, b_n);
+		print_rr(a, b, a_n, b_n);
 	while (a[0] != cheap[1])
-		ra(a, a_n);
+		print_ra(a, a_n);
 	while (spot(cheap[1], b, b_n) > 0)
-		rb(b, b_n);
-	pb(a, b, a_n, b_n);
+		print_rb(b, b_n);
+	print_pb(a, b, a_n, b_n);
 	free(cheap);
 }
 
@@ -43,10 +43,10 @@ void	apply_rr_r(int *a, int *a_n, int *b, int *b_n)
 		free_err_check(a, b, 2);
 	}
 	while (a[0] != cheap[1])
-		rra(a, a_n);
+		print_rra(a, a_n);
 	while (spot(cheap[1], b, b_n) != 0)
-		rb(b, b_n);
-	pb(a, b, a_n, b_n);
+		print_rb(b, b_n);
+	print_pb(a, b, a_n, b_n);
 	free(cheap);
 }
 
@@ -61,12 +61,12 @@ void	apply_rr_rr(int *a, int *a_n, int *b, int *b_n)
 		free_err_check(a, b, 2);
 	}
 	while (a[0] != cheap[1] && spot(cheap[1], b, b_n) > 0)
-		rrr(a, b, a_n, b_n);
+		print_rrr(a, b, a_n, b_n);
 	while (a[0] != cheap[1])
-		rra(a, a_n);
+		print_rra(a, a_n);
 	while (spot(cheap[1], b, b_n) > 0)
-		rrb(b, b_n);
-	pb(a, b, a_n, b_n);
+		print_rrb(b, b_n);
+	print_pb(a, b, a_n, b_n);
 	free(cheap);
 }
 
@@ -81,9 +81,9 @@ void	apply_r_rr(int *a, int *a_n, int *b, int *b_n)
 		free_err_check(a, b, 2);
 	}
 	while (a[0] != cheap[1])
-		ra(a, a_n);
+		print_ra(a, a_n);
 	while (spot(cheap[1], b, b_n) != 0)
-		rrb(b, b_n);
-	pb(a, b, a_n, b_n);
+		print_rrb(b, b_n);
+	print_pb(a, b, a_n, b_n);
 	free(cheap);
 }

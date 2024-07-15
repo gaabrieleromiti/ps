@@ -6,7 +6,7 @@
 /*   By: gromiti <gromiti@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/27 18:24:53 by gromiti           #+#    #+#             */
-/*   Updated: 2024/06/27 17:36:01 by gromiti          ###   ########.fr       */
+/*   Updated: 2024/07/15 17:44:28 by gromiti          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,6 @@ void	ra(int *a, int *a_n)
 	while (i++ < *a_n - 2)
 		a[i] = a[i + 1];
 	a[i] = tmp;
-	write(1, "ra\n", 3);
 }
 
 void	rb(int *b, int *b_n)
@@ -35,7 +34,6 @@ void	rb(int *b, int *b_n)
 	while (i++ < *b_n - 2)
 		b[i] = b[i + 1];
 	b[i] = tmp;
-	write(1, "rb\n", 3);
 }
 
 void	rr(int *a, int *b, int *a_n, int *b_n)
@@ -53,5 +51,4 @@ void	rr(int *a, int *b, int *a_n, int *b_n)
 	while (i++ < *b_n - 2)
 		b[i] = b[i + 1];
 	b[i] = tmp;
-	write(1, "rr\n", 3);
 }
