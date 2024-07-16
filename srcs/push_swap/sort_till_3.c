@@ -6,7 +6,7 @@
 /*   By: gromiti <gromiti@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/28 16:48:43 by gromiti           #+#    #+#             */
-/*   Updated: 2024/07/16 12:40:53 by gromiti          ###   ########.fr       */
+/*   Updated: 2024/07/16 15:03:37 by gromiti          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,11 +76,14 @@ int	spot(int n, int *s, int *s_n)
 
 void	sort_till_3(int *a, int *b, int *a_n, int *b_n)
 {
+	int	count;
+
+	count = 3;
 	print_pb(a, b, a_n, b_n);
 	print_pb(a, b, a_n, b_n);
 	if (b[0] < b[1])
 		print_sb(b);
-	while (*a_n > 0)
+	while (*a_n > 3)
 		apply_cheap(a, a_n, b, b_n);
 	while (ind(biggest(b, b_n), b, b_n) != 0)
 	{
@@ -89,6 +92,13 @@ void	sort_till_3(int *a, int *b, int *a_n, int *b_n)
 		else
 			print_rrb(b, b_n);
 	}
+	sort_3(a, a_n, b, b_n);
 	while (*b_n > 0)
+	{
+		while (b[0] < a[*a_n - 1] && count-- > 0)
+			print_rra(a, a_n);
 		print_pa(a, b, a_n, b_n);
+	}
+	while (count-- > 0)
+		print_rra(a, a_n);
 }
