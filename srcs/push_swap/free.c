@@ -6,7 +6,7 @@
 /*   By: gromiti <gromiti@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/26 17:06:29 by gromiti           #+#    #+#             */
-/*   Updated: 2024/07/04 14:40:38 by gromiti          ###   ########.fr       */
+/*   Updated: 2024/07/16 16:49:25 by gromiti          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,5 +26,12 @@ void	free_err_check(int *a, int *b, int err)
 		free(b);
 		write(2, "Error\n", 6);
 		exit(1);
+	}
+	if (err == 3)
+	{
+		free(a);
+		free(b);
+		write(2, "OK\n", 3);
+		exit(0);
 	}
 }

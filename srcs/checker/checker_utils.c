@@ -6,7 +6,7 @@
 /*   By: gromiti <gromiti@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/27 17:29:23 by gromiti           #+#    #+#             */
-/*   Updated: 2024/07/16 16:39:28 by gromiti          ###   ########.fr       */
+/*   Updated: 2024/07/16 16:50:50 by gromiti          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ void	check_and_parse(int argc, char **argv, int *a, int *b)
 	if (digit_check(argc, argv) == 2 || dupl_check(argc, argv) == 2)
 		free_err_check(a, b, 2);
 	if (!ord_check(argc, argv))
-		free_err_check(a, b, 0);
+		free_err_check(a, b, 3);
 	while (i++ < argc - 1)
 		a[i - 1] = ft_atoi(argv[i]);
 }
