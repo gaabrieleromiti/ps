@@ -6,7 +6,7 @@
 /*   By: gromiti <gromiti@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/27 17:29:19 by gromiti           #+#    #+#             */
-/*   Updated: 2024/07/04 14:58:27 by gromiti          ###   ########.fr       */
+/*   Updated: 2024/07/16 16:41:29 by gromiti          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,12 +49,12 @@ int	main(int argc, char **argv)
 	if (argc < 2 || !argv[1])
 		return (0);
 	a.stack = ft_calloc(argc - 1, sizeof(int));
-	a.stack_n = ft_calloc(1, sizeof(int));
 	b.stack = ft_calloc(argc - 1, sizeof(int));
+	check_and_parse(argc, argv, a.stack, b.stack);
+	a.stack_n = ft_calloc(1, sizeof(int));
 	b.stack_n = ft_calloc(1, sizeof(int));
 	*(a.stack_n) = argc - 1;
 	*(b.stack_n) = 0;
-	check_and_parse(argc, argv, a.stack, b.stack);
 	line = get_next_line(0);
 	while (line != NULL)
 	{
