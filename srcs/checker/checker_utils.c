@@ -6,7 +6,7 @@
 /*   By: gromiti <gromiti@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/27 17:29:23 by gromiti           #+#    #+#             */
-/*   Updated: 2024/07/16 16:50:50 by gromiti          ###   ########.fr       */
+/*   Updated: 2024/07/24 16:02:44 by gromiti          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ void	free_ok_ko(t_stack a, t_stack b, char *line, int err)
 	}
 	if (err == 3)
 	{
-		write(1, "Error\n", 6);
+		write(2, "Error\n", 6);
 		exit(1);
 	}
 }
